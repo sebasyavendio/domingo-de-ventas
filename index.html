@@ -247,7 +247,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem;max-width:520px}
       <span class="pill"><i class="dot"></i> Cupos limitados</span>
       <span class="pill">Domingo 15 de noviembre</span>
       <span class="pill">1:00 a 8:00 p. m.</span>
-      <span class="pill">Presencial · <span class="loc-pending pending">lugar se confirma pronto</span></span>
+      <span class="pill">Presencial · Lince, Lima</span>
     </div>
     <div class="title" aria-label="Domingo de Ventas"><span>Domingo de</span><span class="y">Ventas</span></div>
     <div class="hero-grid">
@@ -257,8 +257,9 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem;max-width:520px}
         <div class="cta-row">
           <a class="btn" data-wa="mack" href="#entradas">Garantizar mi entrada · S/ 100</a>
           <a class="btn out" href="#programa">Ver programa</a>
+          <a class="btn out" href="https://www.google.com/maps/search/?api=1&query=Av.+Petit+Thouars+1775+Lince+Lima" target="_blank" rel="noopener">Cómo llegar</a>
         </div>
-        <p class="mini">Organiza Moisés Salazar con partners de yavendió! · <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Domingo+de+Ventas&dates=20261115T180000Z/20261116T010000Z&details=Evento+presencial.+Entrada+S%2F+100.+https%3A%2F%2Fpablob-lab.github.io%2Fsuper-evento-presencial%2F" target="_blank" rel="noopener">Agregar al calendario</a></p>
+        <p class="mini">Organiza Moisés Salazar con partners de yavendió! · <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Domingo+de+Ventas&dates=20261115T180000Z/20261116T010000Z&location=Av.+Petit+Thouars+1775%2C+Of.+1102%2C+Piso+11%2C+Lince&details=Evento+presencial.+Entrada+S%2F+100.+https%3A%2F%2Fpablob-lab.github.io%2Fsuper-evento-presencial%2F" target="_blank" rel="noopener">Agregar al calendario</a></p>
       </div>
       <div class="ticket" id="ticket-hero">
         <div class="top"><span>Entrada general</span><span>cupos limitados</span></div>
@@ -398,8 +399,9 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem;max-width:520px}
 
 <section class="place">
   <div class="wrap rv">
-    <div><span class="kicker" style="color:var(--plum100)">Lugar</span><h2>Presencial, <em class="loc-pending">se confirma pronto</em></h2>
-    <p>Domingo 15 de noviembre, de 1:00 a 8:00 p. m. Apenas se confirme la dirección, la publicamos acá.</p></div>
+    <div><span class="kicker" style="color:var(--plum100)">Lugar</span><h2>Presencial, <em>en Lince</em></h2>
+    <p>Edificio Empresarial El Almirante, Av. Petit Thouars 1775, Oficina 1102, Piso 11, Lince. Domingo 15 de noviembre, de 1:00 a 8:00 p. m.</p></div>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Petit+Thouars+1775+Lince+Lima" target="_blank" rel="noopener">Cómo llegar</a>
   </div>
 </section>
 
@@ -409,7 +411,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem;max-width:520px}
     <h2>Lo que <em>más preguntan</em></h2>
     <div class="faq-wrap">
       <details><summary>¿Cuándo y a qué hora es?</summary><p>El domingo 15 de noviembre, de 1:00 p. m. a 8:00 p. m.</p></details>
-      <details><summary>¿Dónde se realiza?</summary><p>Es presencial. La dirección se confirma pronto y la publicamos en esta página.</p></details>
+      <details><summary>¿Dónde se realiza?</summary><p>En el Edificio Empresarial El Almirante, Av. Petit Thouars 1775, Oficina 1102, Piso 11, Lince (Lima).</p></details>
       <details><summary>¿Cuánto cuesta?</summary><p>La entrada cuesta S/ 100 por persona.</p></details>
       <details><summary>¿Cómo pago mi entrada?</summary><p>Pagas por Yape a Mack o a Moisés. Escríbele a cualquiera de los dos por WhatsApp desde los botones de esta página, te confirman el número de Yape y te reservan tu lugar.</p></details>
       <details><summary>¿Para quién es?</summary><p>Para emprendedores, dueños de negocio y personas que venden o quieren vender mejor, sin importar el rubro.</p></details>
@@ -435,10 +437,6 @@ const T=new Date('2026-11-15T13:00:00-05:00');
 function tick(){const d=T-Date.now();if(d<=0){document.getElementById('count').style.display='none';return}
 cd.textContent=Math.floor(d/864e5);ch.textContent=Math.floor(d%864e5/36e5);cm.textContent=Math.floor(d%36e5/6e4)}
 tick();setInterval(tick,30000);
-// Lugar: completar cuando se confirme (reemplaza "se confirma pronto" y agrega "Cómo llegar")
-const LOCATION={name:'',address:'',maps:''};
-if(LOCATION.address){document.querySelectorAll('.loc-pending').forEach(e=>{e.classList.remove('pending');e.textContent=LOCATION.name?LOCATION.name+' · '+LOCATION.address:LOCATION.address});
- if(LOCATION.maps){const b=document.createElement('a');b.className='btn out';b.href=LOCATION.maps;b.target='_blank';b.rel='noopener';b.textContent='Cómo llegar';document.querySelector('.cta-row').appendChild(b)}}
 // Contactos para compra de entradas (formato internacional, solo dígitos)
 const CONTACTS={mack:'51965488664',moises:'51901134121'};
 const MSG='Hola, quiero comprar mi entrada (S/ 100) para Domingo de Ventas, el domingo 15 de noviembre.';
